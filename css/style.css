@@ -1,0 +1,130 @@
+/* Definição de Fonte */
+@font-face {
+    font-family: "Unbounded";
+    src: url("../fonts/Unbounded-Bold.ttf")
+    format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.ttf")
+    format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo Desktop */
+body{
+background-color: #0E1014;
+color: #ffffff;
+}
+
+header img{
+    display: block;
+    margin: 75px 0 0 360px;
+}
+
+h1{
+    font-size: 64px;
+    font-family: "unbounded", sans-serif;
+   /*fontes genéricas no css */
+   /*font-family: serif; */
+   /*font-family: sans-serif; */
+   /*font-family: monospace; */
+   /*font-family: cursive; */
+   /*font-family: fantasy; */
+   text-align: center;
+   margin-top: 60px;
+}
+
+h1 span{
+    color: #9747FF;
+}
+
+p{
+    font-size: 24px;
+    font-family: "poppins" , sans-serif;
+    text-align: center;
+    width: 792px;
+    margin: 24px auto 0;
+}
+
+a{
+    color: #ffffff;
+    font-family: "poppins" , sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    background-color: #9747FF;
+    width: 340px;/*Para ter certeza que esse tamanho foi aolicado temos que inspecionar no navegador, nesse caso não esta funcionando o tamanho pois esta com display inline e só com o display em block conseguimos alterar o tamanho*/
+    height: 66px;/*O mesmo que acontece no width, acontece em height*/
+    display: block;/*Se estivesse display: inline; o elemento ficaria um do lado do outro como estava antes de definirmos deixar em bloco,elementos inline não têm espaço envolta, ja os elementos que ficam em bloco conseguimos definir altura e largura, os inline não, porem em "inline" conseguimos deixar um ao lado do outro como estava, existe uma terceira forma de reenderizar elementos o nome é "inline block" que nos permite alterar altura e largura e colocar-los um ao lado do outro. */
+    text-align: center;
+    line-height: 66px;
+    /*Usamos o mesmo valor de "height" e outra propriedade que pode ser utilizada é o padding, porém precisamos analisar pois o "padding" ele soma a altura definida em width mais a que foi definida em "height", padding é um espaçamento interno, então se definirmos o padding, não precisaria definir altura e nem largura, pois o mesmo soma valores.*/
+    border-radius: 36px;
+    margin: 40px auto;
+    /*para centralizar o botão em si não podemos utilizar propriedade "text-align" e usamos a margin.*/ 
+}
+
+/*Usaremos agora um pseudo-elemento, é acessar estados de um elemento através do css, normalmente mencionamos tag que queremos acessar o estados em seguida colocamos ":", os dois pontos e o estado que queremos, no caso abaixo colocaremos o estado Hover que assim que o usuário passar o mouse no botão terá outra cor.*/
+a:hover{
+    background-color: #8233E8;
+}
+
+section img{
+    display: block;
+    width: 792px;
+    height: 446px;
+    margin: 0 auto;
+}
+
+
+/* Estilo Tablet*/
+
+@media(max-width: 768px){
+
+header img{
+    margin-top: 65px;
+    margin-left: 60px;
+}
+
+p{
+    width: 648px;
+}
+}
+
+/* Estilo Celular*/
+
+@media(max-width: 376px){
+header img{
+    margin-top: 32px;
+    margin-left: 16px;
+}
+h1{
+    font-size: 40px;
+}
+p{
+    width: 341px;
+    font-size: 20px;
+}
+
+a{
+    width: 251px;
+    font-size: 20px;
+}
+
+section img{
+    width: 340px;
+    height: 230px;
+}
+}
